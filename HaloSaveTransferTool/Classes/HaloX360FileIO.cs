@@ -11,6 +11,8 @@ namespace HaloMCCPCSaveTransferTool
 {
     public static class HaloX360FileIO
     {
+
+        //XUID Validation+++++++++++++++++++++++++++++++++
         public static bool ValidXUID(string XUID)
         {
             if (XUID.Length == 16)
@@ -19,21 +21,29 @@ namespace HaloMCCPCSaveTransferTool
                 for (int i = 0; i < XUID.Length; i++)
                 {
                     c = XUID[i];
-                    if (!((c >= '0' && c <= '9') ||
-                          (c >= 'a' && c <= 'f') ||
-                          (c >= 'A' && c <= 'F'))) return false;
+                    //HEX Code Check
+                    if (
+                            !(
+                                (c >= '0' && c <= '9') ||
+                                (c >= 'a' && c <= 'f') ||
+                                (c >= 'A' && c <= 'F')
+                             ) 
+                        ) return false;
                 }
                 return true;
             }
             return false;
         }
+
         public static bool Export(ContainerInfo containerInfo, string destinationPath)
         {
+            //File Validation+++++++++++++
             if (File.Exists(containerInfo.path) && destinationPath != null)
             {
                 if (File.Exists(destinationPath)) { throw new Exception("File already exists"); } // should not write over any files without prompting the user 
                 using (MemoryStream x360FileStream = new MemoryStream(containerInfo.file.GetTempIO(true).ReadStream(), false))
                 {
+                    //File Creation++++++++++++++
                     FileStream file = new FileStream(destinationPath, FileMode.Create, FileAccess.Write);
                     x360FileStream.WriteTo(file);
                     file.Close();
@@ -125,6 +135,7 @@ namespace HaloMCCPCSaveTransferTool
         {
             MainWindow.Output.WriteLine("Gathering Files");
             List<string> allFiles = GetAllFiles(directory);
+            //Here
             MainWindow.Output.WriteLine("All files Gathered, scanning for potential containers");
             List<string> potentialContainerFiles = GetPotentialContainerFiles(allFiles);
             MainWindow.Output.WriteLine("All Potential Containers Gathered, Gathering Container Info from containers");

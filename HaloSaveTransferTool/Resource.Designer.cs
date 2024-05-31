@@ -19,7 +19,7 @@ namespace HaloMCCPCSaveTransferTool {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resource {
@@ -182,18 +182,20 @@ namespace HaloMCCPCSaveTransferTool {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  Volume in drive D has no label.
-        /// Volume Serial Number is 0C28-0857
-        ///
-        /// Directory of D:\Games\Steam\steamapps\common\Halo The Master Chief Collection\halo4\game_variants
-        ///
-        ///12/03/2020  10:25 PM    &lt;DIR&gt;          .
-        ///12/03/2020  10:25 PM    &lt;DIR&gt;          ..
-        ///11/18/2020  05:55 PM             2,964 H4_BASIC_EDITING_132.bin
-        ///11/18/2020  05:56 PM            18,018 H4_CTF_132.bin
-        ///11/18/2020  05:56 PM            28,247 H4_DOMINION_132.bin
-        ///11/18/2020  05:56 PM            24,956 H4_EXTRACTION_132.bin
-        ///11/18/2020  [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to H4_BASIC_EDITING_132.bin
+        ///H4_CTF_132.bin
+        ///H4_DOMINION_132.bin
+        ///H4_EXTRACTION_132.bin
+        ///H4_FLOOD_132.bin
+        ///H4_GOAL_132.bin
+        ///H4_GOAL_FORGE_132.bin
+        ///H4_Grifball_132.bin
+        ///H4_infinityrumble_8ffa_132.bin
+        ///H4_KOTH_132.bin
+        ///H4_ODDBALL_132.bin
+        ///H4_REGICIDE_132.bin
+        ///H4_SLAYER_132.bin
+        ///H4_SWAT_132.bin.
         /// </summary>
         public static string Halo4GameTypeIgnoreList {
             get {
@@ -202,17 +204,10 @@ namespace HaloMCCPCSaveTransferTool {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  Volume in drive D has no label.
-        /// Volume Serial Number is 0C28-0857
-        ///
-        /// Directory of D:\Games\Steam\steamapps\common\Halo The Master Chief Collection\halo4\map_variants
-        ///
-        ///12/03/2020  10:34 PM    &lt;DIR&gt;          .
-        ///12/03/2020  10:34 PM    &lt;DIR&gt;          ..
-        ///11/18/2020  06:02 PM            14,074 ca_forge_bonanza_relay.mvar
-        ///11/18/2020  06:02 PM            13,821 ca_forge_erosion_ascent.mvar
-        ///11/18/2020  06:05 PM            11,360 ca_forge_ravine_settler.mvar
-        ///11/18/2020  06:02 PM             3,005 grifballc [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to ca_forge_bonanza_relay.mvar
+        ///ca_forge_erosion_ascent.mvar
+        ///ca_forge_ravine_settler.mvar
+        ///grifballcourt.mvar.
         /// </summary>
         public static string Halo4MapIgnoreList {
             get {
